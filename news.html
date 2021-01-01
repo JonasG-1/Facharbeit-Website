@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<!-- PRESET PAGE - COPY ON NEW SITE -->
+
+<!-- DO NOT CHANGE... -->
+
+<html lang="de">
+
+<head>
+    <title>Gaming Ultra - Startseite</title>
+    <link rel="icon" href="images/controllericon.ico" type="image/icon" />
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700&display=swap&subset=latin-ext"
+        rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="main.js" type="text/javascript"></script>
+    <!-- change #bback for background - delete #preset on copy -->
+    <style>
+        #hintergrund {
+            background-image: linear-gradient(to bottom right,
+                    #d4bb61,
+                    #c571d6);
+            height: 100%;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<!-- HEAD END -->
+
+<body id="hintergrund">
+    <div class="loading-display">
+        <div class="loadingbuffer"></div>
+    </div>
+    <a href="#up" class="backtop">
+        <img src="images/arrowup2.png" id="arrow" />
+    </a>
+    <!-- class="nowon" für Anzeige der Seite hinzufügen/weg machen -->
+    <header>
+        <div class="inner-width" id="up">
+            <a href="index.html" class="logo">
+                <img src="images/gamingultra-alt.png" alt="Logo" id="DMLogo" />
+            </a>
+            <nav class="navigation-menu">
+                <a href="index.html" class="nodec">
+                    <i class="fas fa-home lightred"></i>
+                    Start
+                </a>
+                <a href="games.html" class="nodec">
+                    <i class="fas fa-gamepad lightgreen"></i>
+                    Spiele
+                </a>
+                <a href="news.html" class="nodec nowon">
+                    <i class="fas fa-newspaper darkyellow"></i>
+                    Neues
+                </a>
+                <a href="about.html" class="nodec">
+                    <i class="fas fa-address-card blue"></i>
+                    Über
+                </a>
+            </nav>
+        </div>
+    </header>
+    <!-- ...BIS HIER -->
+
+    <div class="uarehere dlayout">
+        Du bist hier:
+        <a href="index.html">Gaming Ultra</a>
+        >
+        <a href="news.html">News</a>
+    </div>
+
+    <div class="dlayout">
+        <h1>Aktuelle Neuigkeiten</h1>
+        <p class="p">Die neusten Artikel auf Gaming Ultra. <b>Jetzt neu:</b></p>
+
+
+        <!-- ARTCONTAINER -->
+        <div class="artcontainer">
+            <div class="artwrapper" onclick="thispage('none', 'articles/borderlands.html', 'instant')">
+
+                <img src="images/articles/borderlands3-cover.png" alt="" class="artimg">
+
+                <div class="vr">
+                </div>
+                <div class="arttext">
+                    <u class="p">Borderlands 3</u>
+                    <div class="artinformation">
+                        <span class="artdesc">
+                            <pre>
+<b>Entwickler: </b>Gearbox Software
+<b>Genres: </b>Action, Ego-Shooter, Arcade
+<b>Alter: </b>Ab 18
+<b>Mehrspieler: </b>Ja (bis zu 4)
+                        </pre>
+                        </span>
+                        <span class="artrewiew">
+                            <pre>
+[Hier Klicken um zum Artikel zu kommen]
+Meta- und Userscore von https://www.metacritic.com
+Hinzugefügt am [Datum]
+                            </pre>
+                        </span>
+                    </div>
+                </div>
+                <div class="metacritic">
+                    <span>
+                        <div class="metascore mgreen">81</div>
+                        Metascore
+                    </span><br>
+                    <span>
+                        <div class="userscore myellow">5.2</div>
+                        Userscore
+                    </span>
+                </div>
+            </div>
+            <div class="artlink">
+                <span class="artlinktext"> <i class="fas fa-arrow-circle-right"></i></span>
+            </div>
+        </div>
+        <!-- ARTCONTAINER -->
+
+
+    </div>
+    <div class="backbox">
+
+        <div class="newscontainer">
+            <div class="articlelist">
+
+                <div id="newest">
+
+                    <!-- NEUSTE -->
+                    <h1>Neuste Artikel</h1>
+                    <div class="artcontainer">
+                        <div class="artwrapper" onclick="thispage('none', 'articles/borderlands.html', 'instant')">
+
+                            <img src="images/articles/borderlands3-cover.jpg" alt="" class="artimg">
+
+                            <div class="vr">
+                            </div>
+                            <div class="arttext">
+                                <u class="p">Borderlands 3</u>
+                                <div class="artinformation">
+                                    <span class="artdesc">
+                                        <pre>
+<b>Entwickler: </b>Gearbox Software
+<b>Genres: </b>Action, Ego-Shooter, Arcade
+<b>Alter: </b>Ab 18
+<b>Mehrspieler: </b>Ja (bis zu 4)
+                                </pre>
+                                    </span>
+                                    <span class="artrewiew">
+                                        <pre>
+[Hier Klicken um zum Artikel zu kommen]
+Meta- und Userscore von https://www.metacritic.com
+Hinzugefügt am [Datum]
+                                    </pre>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="metacritic">
+                                <span>
+                                    <div class="metascore mgreen">81</div>
+                                    Metascore
+                                </span><br>
+                                <span>
+                                    <div class="userscore myellow">5.2</div>
+                                    Userscore
+                                </span>
+                            </div>
+                        </div>
+                        <div class="artlink">
+                            <span class="artlinktext"> <i class="fas fa-arrow-circle-right"></i></span>
+                        </div>
+                    </div>
+                    <div class="artcontainer">
+                        <div class="artwrapper" onclick="thispage('none', 'articles/apexlegends.html', 'instant')">
+
+                            <img src="images/articles/apexlegends-cover.jpg" alt="" class="artimg">
+
+                            <div class="vr">
+                            </div>
+                            <div class="arttext">
+                                <u class="p">Apex Legends</u>
+                                <div class="artinformation">
+                                    <span class="artdesc">
+                                        <pre>
+<b>Entwickler: </b>Respawn Entertainment
+<b>Genres: </b>Action, Ego-Shooter, Taktik
+<b>Alter: </b>Ab 16
+<b>Mehrspieler: </b>Ja (3 Spieler pro Team)
+                                </pre>
+                                    </span>
+                                    <span class="artrewiew">
+                                        <pre>
+[Hier Klicken um zum Artikel zu kommen]
+Meta- und Userscore von https://www.metacritic.com
+Hinzugefügt am [Datum]
+                                    </pre>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="metacritic">
+                                <span>
+                                    <div class="metascore mgreen">88</div>
+                                    Metascore
+                                </span><br>
+                                <span>
+                                    <div class="userscore myellow">5.9</div>
+                                    Userscore
+                                </span>
+                            </div>
+                        </div>
+                        <div class="artlink">
+                            <span class="artlinktext"> <i class="fas fa-arrow-circle-right"></i></span>
+                        </div>
+                    </div>
+                    <div class="artcontainer">
+                        <div class="artwrapper" onclick="thispage('none', 'articles/brawlhalla.html', 'instant')">
+
+                            <img src="images/articles/brawlhalla-cover.jpg" alt="" class="artimg">
+
+                            <div class="vr">
+                            </div>
+                            <div class="arttext">
+                                <u class="p">Brawlhalla</u>
+                                <div class="artinformation">
+                                    <span class="artdesc">
+                                        <pre>
+<b>Entwickler: </b>Blue Mammoth Games
+<b>Genres: </b>Action, Kämpfen, 2D
+<b>Alter: </b>Keine USK empfehlung
+<b>Mehrspieler: </b>Ja (bis zu 4)
+                                </pre>
+                                    </span>
+                                    <span class="artrewiew">
+                                        <pre>
+[Hier Klicken um zum Artikel zu kommen]
+Meta- und Userscore von https://www.metacritic.com
+Hinzugefügt am [Datum]
+                                    </pre>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="metacritic">
+                                <span>
+                                    <div class="metascore mgray">tbd</div>
+                                    Metascore
+                                </span><br>
+                                <span>
+                                    <div class="userscore myellow">7.4</div>
+                                    Userscore
+                                </span>
+                            </div>
+                        </div>
+                        <div class="artlink">
+                            <span class="artlinktext"> <i class="fas fa-arrow-circle-right"></i></span>
+                        </div>
+                    </div>
+                    <div class="artcontainer">
+                        <div class="artwrapper"
+                            onclick="thispage('none', 'articles/counterstrikeglobaloffensive.html', 'instant')">
+
+                            <img src="images/articles/csgo-cover.jpg" alt="" class="artimg">
+
+                            <div class="vr">
+                            </div>
+                            <div class="arttext">
+                                <u class="p">Counter-Strike: Global Offensive</u>
+                                <div class="artinformation">
+                                    <span class="artdesc">
+                                        <pre>
+<b>Entwickler: </b>Valve Software
+<b>Genres: </b>Action, Ego-Shooter, Taktik, Modern
+<b>Alter: </b>Ab 16
+<b>Mehrspieler: </b>Ja (bis zu 5 pro Team)
+                                </pre>
+                                    </span>
+                                    <span class="artrewiew">
+                                        <pre>
+[Hier Klicken um zum Artikel zu kommen]
+Meta- und Userscore von https://www.metacritic.com
+Hinzugefügt am [Datum]
+                                    </pre>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="metacritic">
+                                <span>
+                                    <div class="metascore mgreen">83</div>
+                                    Metascore
+                                </span><br>
+                                <span>
+                                    <div class="userscore myellow">7.4</div>
+                                    Userscore
+                                </span>
+                            </div>
+                        </div>
+                        <div class="artlink">
+                            <span class="artlinktext"> <i class="fas fa-arrow-circle-right"></i></span>
+                        </div>
+                    </div>
+                    <div class="artcontainer">
+                        <div class="artwrapper" onclick="thispage('none', 'articles/leagueoflegends.html', 'instant')">
+
+                            <img src="images/articles/league-cover.jpg" alt="" class="artimg">
+
+                            <div class="vr">
+                            </div>
+                            <div class="arttext">
+                                <u class="p">League of Legends</u>
+                                <div class="artinformation">
+                                    <span class="artdesc">
+                                        <pre>
+<b>Entwickler: </b>Riot Games
+<b>Genres: </b>Action, Strategy, MOBA, RPG
+<b>Alter: </b>Ab 12
+<b>Mehrspieler: </b>Ja (bis zu 5 pro Team)
+                                </pre>
+                                    </span>
+                                    <span class="artrewiew">
+                                        <pre>
+[Hier Klicken um zum Artikel zu kommen]
+Meta- und Userscore von https://www.metacritic.com
+Hinzugefügt am [Datum]
+                                    </pre>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="metacritic">
+                                <span>
+                                    <div class="metascore mgreen">78</div>
+                                    Metascore
+                                </span><br>
+                                <span>
+                                    <div class="userscore myellow">5.4</div>
+                                    Userscore
+                                </span>
+                            </div>
+                        </div>
+                        <div class="artlink">
+                            <span class="artlinktext"> <i class="fas fa-arrow-circle-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- BELIEBTESTE -->
+                <div id="hot">
+                    <h1>Gerade Beliebt</h1>
+                </div>
+
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <!-- GUIDES -->
+                <div id="guides">
+                    <h1>Guides</h1>
+                </div>
+
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <!-- TIPPS -->
+                <div id="tipps">
+                    <h1>Tipps und Tricks</h1>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <!-- ALLES -->
+                <div id="all">
+                    <h1>Alle Artikel</h1>
+                </div>
+            </div>
+            <div class="newsnavrow">
+                <span class="p">Abschnitte - News
+                    <hr>
+                    <a href="#newest" class="newsnava" id="newesta">Neuste Artikel</a>
+                    <a href="#hot" class="newsnava" id="hota">Gerade Beliebt</a>
+                    <a href="#guides" class="newsnava" id="guidesa">Guides</a>
+                    <a href="#tipps" class="newsnava" id="tippsa">Tipps und Tricks</a>
+                    <a href="#all" class="newsnava" id="alla">Alle Artikel</a>
+
+                </span>
+            </div>
+
+        </div>
+    </div>
+    <div id="botinfo" class="dark">
+        <img src="images/gamingultra-alt2.png" class="guimg" />
+        <div id="botinfor">
+            <br />
+            <ul class="bottable">
+                <li class="bottable">
+                    <a href="impressum.html" class="nodec dark">Impressum</a>
+                </li>
+                <li class="bottable">
+                    <a href="contact.html" class="nodec dark">Kontakt</a>
+                </li>
+                <li class="bottable">
+                    <a href="about.html" class="nodec dark">Über</a>
+                </li>
+                <li class="bottable">
+                    <button class="defbutton" onclick="darkMode()">
+                        Dark Mode
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        $(function () {
+            $(window).scroll(function () {
+                var scrollPos = $(window).scrollTop();
+                if (scrollPos <= 300) {
+                    document.getElementById("newesta").style.backgroundColor =
+                        "rgba(128, 128, 128, 0.2)";
+                }
+
+                if (scrollPos >= 300 && scrollPos <= 1500) {
+                    document.getElementById("newesta").style.backgroundColor =
+                        "rgba(128, 128, 128, 0.6)";
+                    document.getElementById("hota").style.backgroundColor = "rgba(128, 128, 128, 0.2)";
+                }
+
+                if (scrollPos >= 1501 && scrollPos <= 2500) {
+                    document.getElementById("hota").style.backgroundColor = "rgba(128, 128, 128, 0.6)";
+                    document.getElementById("newesta").style.backgroundColor =
+                        "rgba(128, 128, 128, 0.2)";
+                    document.getElementById("guidesa").style.backgroundColor =
+                        "rgba(128, 128, 128, 0.2)";
+                }
+
+                if (scrollPos >= 2500 && scrollPos <= 3000) {
+                    document.getElementById("guidesa").style.backgroundColor =
+                        "rgba(128, 128, 128, 0.6)";
+                    document.getElementById("hota").style.backgroundColor = "rgba(128, 128, 128, 0.2)";
+                    document.getElementById("tippsa").style.backgroundColor =
+                        "rgba(128, 128, 128, 0.2)";
+                }
+
+                if (scrollPos >= 3000 && scrollPos <= 3500) {
+                    document.getElementById("tippsa").style.backgroundColor =
+                        "rgba(128, 128, 128, 0.6)";
+                    document.getElementById("guidesa").style.backgroundColor =
+                        "rgba(128, 128, 128, 0.2)";
+                    document.getElementById("alla").style.backgroundColor = "rgba(128, 128, 128, 0.2)";
+                }
+
+                if (scrollPos >= 3500 && scrollPos <= 4500) {
+                    document.getElementById("alla").style.backgroundColor = "rgba(128, 128, 128, 0.6)";
+                    document.getElementById("tippsa").style.backgroundColor =
+                        "rgba(128, 128, 128, 0.2)";
+                }
+
+                if (scrollPos >= 4500) {
+                    document.getElementById("alla").style.backgroundColor = "rgba(128, 128, 128, 0.2)";
+                }
+            })
+
+        })
+    </script>
+</body>
+
+</html>

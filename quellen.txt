@@ -1,0 +1,11 @@
+Quellcodenachweise:
+
+Navigations-Menu: Inspiriert von https://www.darkcode.info/2020/02/responsive-menu-navigation-using-html.html
+
+JS Swal.fire: https://sweetalert2.github.io/
+
+Kopierfunktion: Inspiriert von https://stackoverflow.com/questions/33855641/copy-output-of-a-javascript-variable-to-the-clipboard
+
+
+
+

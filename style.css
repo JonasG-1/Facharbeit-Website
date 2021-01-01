@@ -1,0 +1,628 @@
+* {
+    font-family: Roboto;
+}
+
+.p {
+    font-size: 25px;
+}
+
+hr {
+    border: 1px solid;
+}
+
+body {
+    margin: 0px;
+    min-width: 1200px;
+}
+
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+.dlayout {
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 40px;
+    background-color: white;
+    border-radius: 7px;
+    padding: 15px;
+}
+
+div.uarehere {
+    margin-top: 70px;
+    padding-left: 10px;
+    padding-top: 15px;
+    font-size: 16px;
+}
+
+.backtop {
+    background: grey;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 16px;
+    z-index: 100;
+    text-decoration: none;
+    color: darkkhaki;
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    border: 3px solid #606060;
+}
+
+#arrow {
+    text-align: center;
+    width: 20px;
+}
+
+.backtop:hover {
+    background: #606060;
+}
+
+#botinfo {
+    bottom: 0px !important;
+    background-color: white;
+    color: grey;
+    height: 170px;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    min-width: 96%;
+}
+
+.guimg {
+    width: 100px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    float: left;
+}
+
+#botinfor {
+    top: 0px;
+    margin-left: 150px;
+}
+
+ul.bottable {
+    list-style-type: none;
+    display: inline;
+}
+
+li.bottable {
+    display: inline;
+    text-align: center;
+    margin-left: 50px;
+}
+
+a.nodec {
+    text-decoration: none;
+}
+
+header {
+    height: 100px;
+    background: #3b3b3b;
+}
+
+.inner-width {
+    width: 1000px;
+    margin: auto;
+}
+
+.logo {
+    float: left;
+    padding: 15px 0;
+}
+
+.logo img {
+    height: 70px;
+}
+
+.navigation-menu {
+    float: right;
+    display: flex;
+    align-items: center;
+    min-height: 100px;
+}
+
+.nowon {
+    background: #cccccc;
+    color: #2f3640 !important;
+}
+
+.navigation-menu a {
+    margin-left: 10px;
+    color: #ddd;
+    padding: 12px 20px;
+    border-radius: 3px;
+    transition: 0.3s linear;
+}
+
+.navigation-menu a:hover {
+    background: #fff;
+    color: #2f3640;
+    transform: scale(1.1);
+    border-radius: 0px;
+}
+
+.navigation-menu i {
+    margin-right: 8px;
+    font-size: 16px;
+}
+
+.lightred {
+    color: #cc4e4e;
+}
+
+.lightgreen {
+    color: #16c051;
+}
+
+.darkyellow {
+    color: #c4b31b;
+}
+
+.blue {
+    color: #315be2;
+}
+
+.pink {
+    color: #d62cb1;
+}
+
+.orange {
+    color: #df8c48;
+}
+
+.lightblue {
+    color: #00ffff;
+}
+
+.purple {
+    color: #7c0eaf;
+}
+
+.brown {
+    color: #5a4019;
+}
+
+.yellow {
+    color: #d6d302;
+}
+
+.red {
+    color: red;
+}
+
+.loading-display {
+    content: "";
+    overflow: show;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    display: block;
+    align-items: center;
+    background-color: black;
+    margin-bottom: 0px;
+    position: fixed;
+    z-index: 101;
+    top: 0;
+}
+
+.loadingbuffer {
+    animation-name: loading;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    color: #fff;
+    background-color: #fff;
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    margin-top: 500px;
+}
+
+
+@keyframes loading {
+    0% {
+        transform: rotate(0deg);
+        border-radius: 5%;
+    }
+
+    25% {
+        transform: rotate(70deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+        border-radius: 40%;
+    }
+
+    75% {
+        transform: rotate(245deg);
+        border-radius: 30%;
+    }
+
+    100% {
+        transform: rotate(360deg);
+        border-radius: 5%;
+    }
+}
+
+.defbutton {
+    width: 230px !important;
+    min-height: 50px;
+    padding: 10px !important;
+    border: 2px solid black;
+    border-radius: 7px !important;
+    background-color: white;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    transition: 0.5s;
+    margin-top: 20px;
+    text-align: center;
+    color: black;
+}
+
+.btngreen {
+    width: 230px;
+    min-height: 50px;
+    padding: 10px;
+    border: 2px solid green !important;
+    border-radius: 7px !important;
+    background-color: green !important;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    transition: 0.5s;
+    margin-top: 20px;
+    text-align: center;
+    color: white;
+}
+
+.btnred {
+    width: 230px;
+    min-height: 50px;
+    padding: 10px;
+    border: 2px solid red !important;
+    border-radius: 7px !important;
+    background-color: red !important;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    transition: 0.5s;
+    margin-top: 20px;
+    text-align: center;
+    color: white;
+}
+
+.btnblue {
+    width: 230px;
+    min-height: 50px;
+    padding: 10px;
+    border: 2px solid #446ae8 !important;
+    border-radius: 7px !important;
+    background-color: #446ae8 !important;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    transition: 0.5s;
+    margin-top: 20px;
+    text-align: center;
+    color: white;
+}
+
+.btninverted {
+    width: 230px !important;
+    min-height: 50px;
+    padding: 10px !important;
+    border: 2px solid white;
+    border-radius: 7px !important;
+    background-color: black;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    transition: 0.5s;
+    margin-top: 20px;
+    text-align: center;
+    color: white;
+}
+
+.defbutton:hover {
+    box-shadow: inset 0 100px 0 0 black;
+    color: white;
+    border-radius: 1% !important;
+    cursor: pointer;
+}
+
+.btngreen:hover {
+    box-shadow: inset 0 100px 0 0 black !important;
+    color: white;
+    border-radius: 1% !important;
+    border: black !important;
+    cursor: pointer;
+}
+
+.btnred:hover {
+    box-shadow: inset 0 100px 0 0 black;
+    color: white;
+    border-radius: 1% !important;
+    border: black !important;
+    cursor: pointer;
+}
+
+.btnblue:hover {
+    box-shadow: inset 0 100px 0 0 black;
+    color: white;
+    border-radius: 1% !important;
+    border: black !important;
+    cursor: pointer;
+}
+
+.btninverted:hover {
+    box-shadow: inset 0 100px 0 0 white;
+    color: black;
+    border-radius: 1% !important;
+    cursor: pointer;
+}
+
+.btnspecial {
+    animation-name: btnspecial;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    background: linear-gradient(to right, #4478e8 50%, #446ae8 50%);
+    background-size: 200% 100%;
+}
+
+@keyframes btnspecial {
+    0% {
+        background-position: right bottom;
+    }
+
+    25% {}
+
+    50% {}
+
+    75% {}
+
+    100% {
+        background-position: 225px;
+    }
+}
+
+.wrapper {
+    display: flex;
+    margin-left: 50px;
+    margin-right: 50px;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.vr {
+    width: 0px;
+    border: 1px solid;
+    margin-right: 25px;
+}
+
+.dark {
+    background-color: black !important;
+}
+
+.dark a {
+    color: white !important;
+    text-decoration: none !important;
+}
+
+.bottable a:hover {
+    color: rgb(196, 36, 36) !important;
+}
+
+.artimg {
+    height: 160px;
+    margin-right: 25px;
+}
+
+.arttext {
+    font-size: 20px;
+    width: 100%;
+    display: block;
+}
+
+.artwrapper {
+    background-color: rgba(209, 209, 209) !important;
+    padding: 15px;
+    border-radius: 3px;
+    width: 97.7%;
+    height: 160px !important;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-bottom: 50px;
+}
+
+.artlink {
+    background-color: black;
+    border-radius: 3px;
+    width: 100%;
+    height: 190px;
+    display: none;
+}
+
+.artlinktext {
+    display: inline-block;
+    margin-top: 60px;
+    margin-left: 50%;
+    color: white;
+    font-size: 50px;
+}
+
+.artcontainer {
+    position: relative;
+    height: 160px;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.artwrapper:hover {
+    opacity: 0.2;
+    cursor: pointer;
+}
+
+.artwrapper:hover+.artlink {
+    display: block;
+}
+
+.artlinktext:hover+.artlink {
+    display: block;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center !important;
+}
+
+.artdesc {
+    margin-right: 50px;
+    display: inline-block;
+}
+
+.artinformation {
+    display: flex;
+}
+
+
+.metacritic {
+    display: inline-block;
+    margin-top: 8px;
+    background-color: white;
+    width: 220px;
+    height: 105px;
+    padding: 10px;
+    border-radius: 3px;
+    border: 2px solid;
+    font-size: 20px;
+}
+
+.metascore {
+    color: white;
+    width: 50px;
+    height: 38px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-radius: 5px;
+    padding-top: 12px;
+    display: inline-block;
+}
+
+.userscore {
+    color: white;
+    width: 50px;
+    height: 38px;
+    text-align: center;
+    border-radius: 50%;
+    padding-top: 12px;
+    display: inline-block;
+}
+
+.mgreen {
+    background-color: #66CC33;
+}
+
+.myellow {
+    background-color: #FFCC33;
+}
+
+.mred {
+    background-color: #FF0000;
+}
+
+.mgray {
+    background-color: #CCCCCC;
+}
+
+.backbox {
+    width: 100%;
+    height: 5000px;
+    background-color: white;
+    margin-top: 200px;
+    padding-top: 50px;
+}
+
+.newscontainer {
+    display: flex;
+    margin-left: 3%;
+    margin-top: 50px;
+    margin-right: 5%;
+}
+
+.articlelist {
+    width: 80%;
+    margin-right: 3%;
+    height: 4000px;
+}
+
+.newsnavrow {
+    width: 20%;
+    height: 500px;
+
+    position: sticky;
+    align-self: flex-start;
+    top: 200px;
+}
+
+.newsnava {
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 10px;
+    width: 100%;
+    height: 40px;
+    background-color: rgba(128, 128, 128, 0.2);
+    text-align: center;
+    padding-top: 10px;
+    border-radius: 3px;
+    color: black;
+}
+
+.btnsmall {
+    width: 100px !important;
+}
+
+.deftable {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.deftable table {
+    table-layout: fixed;
+
+}
+
+.deftable td {
+    padding: 10px 5px;
+    border-style: solid;
+    border-width: 1px;
+    word-break: normal;
+    border-color: black;
+}
+
+.deftable th {
+    font-size: 14px;
+    font-weight: normal;
+    padding: 5px;
+    border-style: solid;
+    border-width: 1px;
+    word-break: normal;
+    border-color: black;
+    background-color: rgb(223, 223, 223);
+}

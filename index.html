@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<!-- PRESET PAGE - COPY ON NEW SITE -->
+
+<!-- DO NOT CHANGE... -->
+
+<html lang="de">
+
+<head>
+    <title>Gaming Ultra - Startseite</title>
+    <link rel="icon" href="images/controllericon.ico" type="image/icon" />
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700&display=swap&subset=latin-ext"
+        rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="main.js" type="text/javascript"></script>
+    <!-- change #bback for background - delete #preset on copy -->
+    <style>
+        #hintergrund {
+            background-image: linear-gradient(to bottom right,
+                    #59b788,
+                    #5555b9);
+            height: 100%;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        #welcomeimg {
+            width: 400px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .langeweileimg {
+            width: 100%;
+            max-height: 500px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+    </style>
+</head>
+<!-- HEAD END -->
+
+<body id="hintergrund">
+    <span class="loading-display">
+        <div class="loadingbuffer"></div>
+    </span>
+    <a href="#up" class="backtop">
+        <img src="images/arrowup2.png" id="arrow" />
+    </a>
+    <!-- class="nowon" für Anzeige der Seite hinzufügen/weg machen -->
+    <header>
+        <div class="inner-width" id="up">
+            <a href="index.html" class="logo">
+                <img src="images/gamingultra-alt.png" alt="Logo" id="DMLogo" />
+            </a>
+            <nav class="navigation-menu">
+                <a href="index.html" class="nodec nowon">
+                    <i class="fas fa-home lightred"></i>
+                    Start
+                </a>
+                <a href="games.html" class="nodec">
+                    <i class="fas fa-gamepad lightgreen"></i>
+                    Spiele
+                </a>
+                <a href="news.html" class="nodec">
+                    <i class="fas fa-newspaper darkyellow"></i>
+                    Neues
+                </a>
+                <a href="about.html" class="nodec">
+                    <i class="fas fa-address-card blue"></i>
+                    Über
+                </a>
+            </nav>
+        </div>
+    </header>
+    <!-- ...BIS HIER -->
+
+    <div class="uarehere dlayout">
+        Du bist hier:
+        <a href="index.html">Gaming Ultra</a>
+        >
+        <a href="index.html">Home</a>
+    </div>
+    <div class="dlayout" id="welcome">
+        <img src="images/gamingultra.png" id="welcomeimg" />
+        <h1>Willkommen!</h1>
+        <p class="p">
+            Wir bei Gaming Ultra halten dich auf dem neusten Stand, wenn es
+            um Spiele geht!
+            <br />
+            Hier gibt es News, Guides, Tipps und Tricks für alles mögliche!
+            Außerdem geben wir für jedes Jahr unsere Awards, für das beste
+            Spiel aus!
+            <br />
+            <b>
+                Jetzt die
+                <a href="awards.html">Awards für 2019</a>
+                ansehen!
+            </b>
+        </p>
+        <p class="p">
+            Ansonsten wünschen wir dir noch viel Spaß beim zocken!
+        </p>
+        <p class="p">
+            Kein Spiel, kein Problem! Hier ist ein Test, der dir vielleicht
+            helfen könnte ein neues Spiel zu finden:
+        </p>
+        <button class="btnblue" onclick="thispage('none', '#goTest', 'instant')">
+            Zum Test
+            <i class="fas fa-dice-five"></i>
+        </button>
+    </div>
+    <div class="dlayout">
+        <h1>
+            Wusstest du schon, wir haben einen
+            <i class="fab fa-discord" style="color: #7289da;"></i>
+            Discord-Sever!
+        </h1>
+        <div class="wrapper">
+            <div width="300" height="400" style="
+                        background-color: #7289da;
+                        margin-right: 25px;
+                        border-radius: 3px;
+                    ">
+                <h3 style="margin-left: 20px; color: #fff;">
+                    Server Vorschau
+                </h3>
+                <iframe src="https://ptb.discordapp.com/widget?id=699593507072901181&theme=dark" width="350"
+                    height="500" allowtransparency="true" frameborder="0"></iframe>
+            </div>
+            <div class="vr"></div>
+            <div>
+                <p class="p">
+                    Du suchst Leute, die mit dir Spielen können - hier bist
+                    du richtig! Jetzt über den unten stehenden Link
+                    beitreten und einig Paar zusätzliche Berechtigungen
+                    erhalten*, die normale Spieler nicht haben, wie zum
+                    Beispiel:
+                </p>
+                <ul>
+                    <li class="p">
+                        Nickname ändern
+                        <i class="fas fa-signature pink"></i>
+                    </li>
+                    <li class="p">
+                        TTS-Nachrichten senden
+                        <i class="far fa-comment-dots lightgreen"></i>
+                    </li>
+                    <li class="p">
+                        Reaktionen hinzufügen
+                        <i class="far fa-star orange"></i>
+                    </li>
+                    <li class="p">
+                        Zugriff auf exklusive Kanäle
+                        <i class="fas fa-lock-open lightred"></i>
+                    </li>
+                    <li class="p">Und mehr...</li>
+                </ul>
+                <p class="p">
+                    Du kannst auch deine Freunde einladen, aber wenn du
+                    angeben möchtest, drücke auf "Link für Freunde" und
+                    schicke ihnen diesen Link, sodass sie keine COOLE Rolle
+                    bekommen >:-)
+                </p>
+                <div class="buttons">
+                    <button class="defbutton" onclick="newpage('Discord', 'https://bit.ly/discordGUre', 'instant')">
+                        <i class="fab fa-discord" style="color: #7289da;"></i>
+                        Hier beitreten!
+                    </button>
+                    <button class="defbutton" onclick="copyThis('https://discord.gg/jN9qXK2')">
+                        Link für Freunde
+                    </button>
+                </div>
+                <br />
+                *Möglicherweise nicht verfügbar zu einigen Zeiten.
+                <br />
+                Sollte links keine Vorschau verfügbar sein, ist es
+                wahrscheinlich zu Problemen bei Discord gekommen!
+            </div>
+        </div>
+    </div>
+
+    <div class="dlayout">
+        <h1>Langeweile?</h1>
+        <p class="p">Hier haben wir genau das richtige für dich!</p>
+        <h2>Kostenlose PC Spiele:</h2>
+        <p class="p"><u>1. Apex Legends</u></p>
+        <img src="images/apexlegends.jpg" alt="Apex Legends" class="langeweileimg" />
+        <p class="p">
+            Ein super Multiplayer Battle Royale PvP Spiel zum Zeitvertreib
+            oder Suchten. Entweder allein oder mit bis zu zwei Freunden
+            gegen 57 andere. Worauf wartest du noch? Lad es dir über Origin
+            herunter und spring gleich ins Spiel! Hier geht's zum Artikel
+            über
+            <a href="articles/apexlegends.html">Apex Legends</a>
+            oder hier direkt zum download:
+            <br />
+            <button class="defbutton" onclick="newpage('Origin', 'http://bit.ly/downloadApexLegends', 'account')">
+                Zum Download
+                <i class="fas fa-chess-knight"></i>
+            </button>
+        </p>
+        <hr />
+        <p class="p"><u>2. Brawlhalla</u></p>
+        <img src="images/brawlhalla.png" alt="Brawlhalla" class="langeweileimg" />
+        <p class="p">
+            Kennst du Smash auf der Nintendo? Möchtest du es gerne spielen
+            aber kein Geld dafür ausgeben? Dann ist dieses Spiel perfekt für
+            dich! Du kannst es dir einfach über Steam herunterladen und
+            gegen drei deiner Freunde oder anderen Leuten aus dem Internet
+            antreten! Bis du bereit? Dann los! Hier geht's zum Artikel über
+            <a href="articles/brawlhalla.html">Brawlhalla</a>
+            oder hier gleich zum download:
+            <br />
+            <button class="defbutton" onclick="newpage('Steam', 'http://bit.ly/downloadBrawlhalla', 'account')">
+                Zum Download
+                <i class="fab fa-steam"></i>
+            </button>
+        </p>
+        <hr />
+        <p class="p"><u>3. Counter-Strike: Global Offensive</u></p>
+        <img src="images/counterstrikeglobaloffensive.jpg" alt="Counter-Strike: Global Offensive"
+            class="langeweileimg" />
+        <p class="p">
+            Jeder hat bestimmt schon mal von diesem Spiel gehört.
+            Counter-Strike: Global Offensive oder kruz CS:GO ist ein
+            Ego-Shooter mit vielen verschiedenen Spielmodi. Ob zu 5., zu 2.
+            oder gar im Battle Royale Modus mit 18 Leuten. dieses Spiel
+            bietet genug Möglichkeiten, und das sogar gegen Roboter Gegner,
+            was das ganze auch noch zu einem guten Offline-Spiel macht. Hier
+            geht's zum Artikel über
+            <a href="articles/counterstrikeglobaloffensive.html">
+                Counter-Strike: Global Offensive
+            </a>
+            oder hier sofort zum download:
+            <br />
+            <button class="defbutton"
+                onclick="newpage('Steam', 'http://bit.ly/downloadCounterStrikeGlobalOffensive', 'account')">
+                Zum Download
+                <i class="fab fa-steam"></i>
+            </button>
+        </p>
+        <hr />
+        <p class="p"><u>4. League of Legends</u></p>
+        <img src="images/leagueoflegends.jpg" alt="League of Legends" class="langeweileimg" />
+        <p class="p">
+            Dieses Spiel gehört gleichzeitig mit zu den frustrierendsten
+            Spielen aber auch zu den beliebtesten, obwohl es doch so
+            unscheinbar ist. Man spielt es nur ein wenig und schon ist man
+            komplett versunken. Steuere einen von hunderten Helden mit 4
+            weiteren Mitspielern gegen 5 andere Spieler. Wer wird wohl
+            gewinnen? Finde es jetzt raus! Hier geht es zum Artikel über
+            <a href="articles/leagueoflegends.html">League of Legends</a>
+            oder hier zum download bei Riot Games:
+            <br />
+            <button class="defbutton"
+                onclick="newpage('Riot Games', 'http://bit.ly/downloadLeagueofLegends', 'account')">
+                Zum Download
+                <i class="fas fa-chess-knight"></i>
+            </button>
+        </p>
+        <hr />
+        <p class="p"><u>5. Valorant</u></p>
+        <img src="images/valorant.jpg" alt="Valorant" class="langeweileimg" />
+        <p class="p">
+            Valorant, das neue Spiel von Riot Games, ist bei vielen Leuten
+            wie eine Bombe eingeschlagen. Obwohl es erst seit einigen Wochen
+            raus ist und eine closed Beta ist hat das Spiel schon Rekorde
+            auf Twitch gebrochen und die Spielerzahl ist auch schon
+            unglaublich hoch! Hier gehts zum Artikel über das Spiel
+            <a href="articles/valorant.html">Valorant</a>
+            oder hier zum download bei Riot Games, dem Entwickler:
+            <br />
+            <button class="defbutton" onclick="newpage('Riot Games', 'http://bit.ly/downloadValorant', 'account')">
+                Zum Download
+                <i class="fas fa-chess-knight"></i>
+            </button>
+        </p>
+        <hr />
+        <p class="p"><u>Noch ein kleiner Tipp:</u></p>
+        <p class="p">
+            Auf Epic Games gibt es immer jede neue Woche mehrere Spiele, die
+            sonst Geld kosten komplett
+            <b>GRATIS</b>
+            . Das kann man sich nicht entgehen lassen! Hier siehst du die
+            aktuellen gratis Spiele:
+            <br />
+            <button class="defbutton" onclick="newpage('Epic Games', 'http://bit.ly/FreeGamesEGS', 'redirect')">
+                Zu Epic Games
+                <i class="fas fa-chess-knight"></i>
+            </button>
+        </p>
+        <hr id="goTest" />
+        <br />
+        <br />
+        <br />
+        <h2>Kostenpflichtige Spiele:</h2>
+        <p class="p">
+            Es gibt viele tolle Spiele da draußen, wir können hier aber
+            unmöglich alle auflisten. Deshalb haben wir ein kleinen Test
+            erstellt, mit ein paar dieser Spiele welches Spiele ermittelt,
+            die dir gefallen könnten! Hier kanntst du dir deine
+            Testergebnisse (falls noch bekannt) oder die Liste der
+            verfügbaren Spiele anschauen und den Test (neu-)starten:
+        </p>
+        <div class="buttons">
+            <button class="defbutton" onclick="newpage('none', 'SelbstTest/list.html', 'instant')">
+                Liste der Spiele
+                <i class="far fa-file-alt"></i>
+            </button>
+            <button class="btnblue btnspecial" onclick="newpage('none', 'SelbstTest/start.html', 'instant')">
+                Zum Test
+                <i class="fas fa-dice-five"></i>
+            </button>
+            <button class="btnblue" onclick="getTest()">
+                Testergebnisse
+                <i class="fas fa-question"></i>
+            </button>
+        </div>
+    </div>
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <div id="botinfo">
+        <img src="images/gamingultra.png" class="guimg" />
+        <div id="botinfor">
+            <br />
+            <ul class="bottable">
+                <li class="bottable">
+                    <a href="impressum.html" class="nodec">Impressum</a>
+                </li>
+                <li class="bottable">
+                    <a href="contact.html" class="nodec">Kontakt</a>
+                </li>
+                <li class="bottable">
+                    <a href="about.html" class="nodec">Über</a>
+                </li>
+                <li class="bottable">
+                    <button class="defbutton" onclick="darkMode()">
+                        Dark Mode
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

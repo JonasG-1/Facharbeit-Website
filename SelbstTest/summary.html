@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<!-- PRESET SEITE -->
+
+<html lang="de">
+
+<head>
+    <title>Finde dein Spiel!</title>
+    <link rel="icon" href="../controllericon.ico" type="image/icon" />
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../style.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700&display=swap&subset=latin-ext"
+        rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="../main.js" type="text/javascript"></script>
+    <script src="jsconvert.js" type="text/javascript"></script>
+    <style>
+        #hintergrund {
+            background-color: white;
+        }
+
+        .quizbox {
+            box-shadow: 0px 0px 15px 0 grey;
+            height: 800px;
+            width: 1200px;
+            margin: auto;
+            margin-top: 35px;
+            border-radius: 4px;
+            padding: 20px;
+            padding-left: 40px;
+            padding-right: 40px;
+            position: relative;
+            overflow: auto;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 60px;
+        }
+
+        p {
+            font-size: 30px;
+            text-align: center;
+        }
+
+        button {
+            display: inline-block !important;
+            margin-right: 20px !important;
+        }
+
+        .btncontainer {
+            width: 100%;
+            float: right;
+        }
+
+        .gohome {
+            float: left;
+            margin-left: 20px;
+        }
+
+        .quiz {
+            float: right;
+        }
+
+        #startlogo {
+            opacity: 0;
+            width: 450px;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            animation: fade-in-logo ease 4s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes fade-in-logo {
+            0% {
+                opacity: 0;
+            }
+
+            25% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .question {
+            opacity: 0;
+            animation: question ease 1s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes question {
+            0% {
+                opacity: 0;
+            }
+
+            17% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+                margin-top: 150px;
+            }
+        }
+
+        .smalllogo img {
+            width: 100px;
+            top: 750px;
+            position: absolute;
+            animation: smalllogo 0.5s;
+            animation-delay: .5s;
+            animation-fill-mode: forwards;
+            opacity: 0;
+        }
+
+        @keyframes smalllogo {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .warningtext {
+            top: 800px;
+            position: absolute;
+            margin-left: 350px;
+            color: red;
+        }
+    </style>
+    <script>
+        function pageLoaded() {
+            var pageRequest = localStorage.getItem("onpage");
+            var p1_1 = parseInt(localStorage.getItem("p1_1"));
+            var p1_2 = parseInt(localStorage.getItem("p1_2"));
+            var p2_1 = parseInt(localStorage.getItem("p2_1"));
+            var p2_2 = parseInt(localStorage.getItem("p2_2"));
+            var p2_3 = parseInt(localStorage.getItem("p2_3"));
+            var p2_4 = parseInt(localStorage.getItem("p2_4"));
+            var p2_5 = parseInt(localStorage.getItem("p2_5"));
+
+            var borderlands = 0 + p1_1 + p2_5
+            var halo = 0 + p1_1 + p2_5 + p2_1
+            var sw = 0 + p1_1 + p2_5 + p2_1
+            var rdr = 0 + p1_1 + p2_5
+            var codmw = 0 + p1_1 + p2_5
+            var re2 = 0 + p1_1 + p2_5 + p2_1
+            var ds = 0 + p1_1 + p2_5 + p2_1
+            var control = 0 + p1_1 + p2_5 + p2_1
+            var anno = 0 + p1_2 + p2_5 + p2_1 + p2_2 + p2_3
+            var oni = 0 + p1_2 + p2_5
+            var satisfactory = 0 + p1_2 + p2_5
+            var raft = 0 + p1_2 + p2_5
+            var ls = 0 + p1_2 + p2_5 + p2_1 + p2_2 + p2_3 + p2_4
+            var thiefs = 0 + p1_2 + p2_5
+            var pz = 0 + p1_2 + p2_5 + p2_1 + p2_2 + p2_3
+            var citiesskylines = 0 + p1_2 + p2_5 + p2_1 + p2_2 + p2_3
+            if (pageRequest != "summary") {
+                if (pageRequest == "reset") {
+                    swal.fire({
+                        title: "Fehler!",
+                        text: "Dein Teststand wurde zurückgesetzt, da du den Test verlassen hast, oder die Seite gewächselt hast! Bitte starte den Test neu!",
+                        icon: "error",
+                        showConfirmButton: false
+                    }).then(() => {
+                        location.href = "start.html";
+                    });
+                } else {
+                    swal.fire({
+                        title: "Fehler!",
+                        text: "Ein Fehler ist aufgetreten! Du kannst versuchen zur letzten bekannten Seite zurückzukehren oder den Test neustarten!",
+                        icon: "error",
+                        showConfirmButton: true,
+                        confirmButtonText: "Zurück",
+                        cancelButtonText: "Neustart"
+                    }).then((result) => {
+                        if (result.value) {
+                            continueToPage();
+                        } else {
+                            location.href = "start.html";
+                        }
+                    });
+                }
+            } else {
+
+
+                var order = [{
+                        key: "Borderlands 3",
+                        value: borderlands
+                    },
+                    {
+                        key: "Halo",
+                        value: halo
+                    },
+                    {
+                        key: "Star Wars: Jedi Fallen Order",
+                        value: sw
+                    },
+                    {
+                        key: "Red Dead Redemption 2",
+                        value: rdr
+                    },
+                    {
+                        key: "Call of Duty: Modern Warfare",
+                        value: codmw
+                    },
+                    {
+                        key: "Resident Evil 2",
+                        value: re2
+                    },
+                    {
+                        key: "Death Stranding",
+                        value: ds
+                    },
+                    {
+                        key: "Control",
+                        value: control
+                    },
+                    {
+                        key: "Anno 1800",
+                        value: anno
+                    },
+                    {
+                        key: "Oxygen Not Included",
+                        value: oni
+                    },
+                    {
+                        key: "Satisfactory",
+                        value: satisfactory
+                    },
+                    {
+                        key: "Raft",
+                        value: raft
+                    },
+                    {
+                        key: "Landwirtschafts-Simulator 20",
+                        value: ls
+                    },
+                    {
+                        key: "Thief Simulator",
+                        value: thiefs
+                    },
+                    {
+                        key: "Planet Zoo",
+                        value: pz
+                    },
+                    {
+                        key: "Cities: Skylines",
+                        value: citiesskylines
+                    }
+                ];
+
+                order.sort(function (x, y) {
+                    return x.value - y.value;
+                });
+
+                document.getElementById("sumpos1key").innerHTML = order[15].key;
+                document.getElementById("sumpos1val").innerHTML = order[15].value;
+                document.getElementById("sumpos2key").innerHTML = order[14].key;
+                document.getElementById("sumpos2val").innerHTML = order[14].value;
+                document.getElementById("sumpos3key").innerHTML = order[13].key;
+                document.getElementById("sumpos3val").innerHTML = order[13].value;
+                document.getElementById("sumpos4key").innerHTML = order[12].key;
+                document.getElementById("sumpos4val").innerHTML = order[12].value;
+                document.getElementById("sumpos5key").innerHTML = order[11].key;
+                document.getElementById("sumpos5val").innerHTML = order[11].value;
+                document.getElementById("sumpos6key").innerHTML = order[10].key;
+                document.getElementById("sumpos6val").innerHTML = order[10].value;
+                document.getElementById("sumpos7key").innerHTML = order[9].key;
+                document.getElementById("sumpos7val").innerHTML = order[9].value;
+                document.getElementById("sumpos8key").innerHTML = order[8].key;
+                document.getElementById("sumpos8val").innerHTML = order[8].value;
+                document.getElementById("sumpos9key").innerHTML = order[7].key;
+                document.getElementById("sumpos9val").innerHTML = order[7].value;
+                document.getElementById("sumpos10key").innerHTML = order[6].key;
+                document.getElementById("sumpos10val").innerHTML = order[6].value;
+                document.getElementById("sumpos11key").innerHTML = order[5].key;
+                document.getElementById("sumpos11val").innerHTML = order[5].value;
+                document.getElementById("sumpos12key").innerHTML = order[4].key;
+                document.getElementById("sumpos12val").innerHTML = order[4].value;
+                document.getElementById("sumpos13key").innerHTML = order[3].key;
+                document.getElementById("sumpos13val").innerHTML = order[3].value;
+                document.getElementById("sumpos14key").innerHTML = order[2].key;
+                document.getElementById("sumpos14val").innerHTML = order[2].value;
+                document.getElementById("sumpos15key").innerHTML = order[1].key;
+                document.getElementById("sumpos15val").innerHTML = order[1].value;
+                document.getElementById("sumpos16key").innerHTML = order[0].key;
+                document.getElementById("sumpos16val").innerHTML = order[0].value;
+
+
+            }
+        }
+    </script>
+</head>
+<!-- HEAD END -->
+
+<body id="hintergrund" onload="pageLoaded()">
+    <a href="#up" class="backtop">
+        <img src="../images/arrowup2.png" id="arrow" />
+    </a>
+
+    <div class="quizbox">
+        <h1>Finde dein Spiel!</h1>
+
+        <h2>Diese Spiele werden dir Empfohlen:</h2>
+        <table class="deftable">
+            <colgroup>
+                <col style="width: 100px">
+                <col style="width: 1500px">
+                <col style="width: 100px">
+            </colgroup>
+            <tr>
+                <th class="deftable">
+                    <h3>Platz</h3>
+                </th>
+                <th class="deftable">
+                    <h3>Spiel Name</h3>
+                </th>
+                <th class="deftable">
+                    <h3>Punkte</h3>
+                </th>
+            </tr>
+            <tr>
+                <td class="deftable">1</td>
+                <td class="deftable"><span id="sumpos1key"></span></td>
+                <td class="deftable"><span id="sumpos1val"></span></td>
+            </tr>
+            <tr>
+                <td class="deftable">2</td>
+                <td class="deftable"><span id="sumpos2key"></span></td>
+                <td class="deftable"><span id="sumpos2val"></span></td>
+            </tr>
+            <tr>
+                <td class="deftable">3</td>
+                <td class="deftable"><span id="sumpos3key"></span></td>
+                <td class="deftable"><span id="sumpos3val"></span></td>
+            </tr>
+            <tr>
+                <td class="deftable">4</td>
+                <td class="deftable"><span id="sumpos4key"></span></td>
+                <td class="deftable"><span id="sumpos4val"></span></td>
+            </tr>
+            <tr>
+                <td class="deftable">5</td>
+                <td class="deftable"><span id="sumpos5key"></span></td>
+                <td class="deftable"><span id="sumpos5val"></span></td>
+            </tr>
+            <tr>
+                <td class="deftable">6</td>
+                <td class="deftable"><span id="sumpos6key"></span></td>
+                <td class="deftable"><span id="sumpos6val"></span></td>
+            </tr>
+            <tr>
+                <td class="deftable">7</td>
+                <td class="deftable"><span id="sumpos7key"></span></td>
+                <td class="deftable"><span id="sumpos7val"></span></td>
+            </tr>
+            <tr>
+                <td class="deftable">8</td>
+                <td class="deftable"><span id="sumpos8key"></span></td>
+                <td class="deftable"><span id="sumpos8val"></span></td>
+            </tr>
+            <tr>
+                <td class="deftable">9</td>
+                <td class="deftable"><span id="sumpos9key"></span></td>
+                <td class="deftable"><span id="sumpos9val"></span></td>
+            </tr>
+            <tr>
+                <td class="deftable">10</td>
+                <td class="deftable"><span id="sumpos10key"></span></td>
+                <td class="deftable"><span id="sumpos10val"></span></td>
+            </tr>
+            <tr>
+                <td class="deftable">11</td>
+                <td class="deftable"><span id="sumpos11key"></span></td>
+                <td class="deftable"><span id="sumpos11val"></span></td>
+            </tr>
+            <tr>
+                <td class="deftable">12</td>
+                <td class="deftable"><span id="sumpos12key"></span></td>
+                <td class="deftable"><span id="sumpos12val"></span></td>
+            </tr>
+            <tr>
+                <td class="deftable">13</td>
+                <td class="deftable"><span id="sumpos13key"></span></td>
+                <td class="deftable"><span id="sumpos13val"></span></td>
+            </tr>
+            <tr>
+                <td class="deftable">14</td>
+                <td class="deftable"><span id="sumpos14key"></span></td>
+                <td class="deftable"><span id="sumpos14val"></span></td>
+            </tr>
+            <tr>
+                <td class="deftable">15</td>
+                <td class="deftable"><span id="sumpos15key"></span></td>
+                <td class="deftable"><span id="sumpos15val"></span></td>
+            </tr>
+            <tr>
+                <td class="deftable">16</td>
+                <td class="deftable"><span id="sumpos16key"></span></td>
+                <td class="deftable"><span id="sumpos16val"></span></td>
+            </tr>
+        </table>
+
+        <button class="defbutton" onclick="closeTab()">
+            Seite schließen
+        </button>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+</body>
+
+</html>

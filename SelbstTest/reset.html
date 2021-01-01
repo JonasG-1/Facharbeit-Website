@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!-- PRESET SEITE -->
+
+<html lang="de">
+
+<head>
+    <title>Finde dein Spiel!</title>
+    <link rel="icon" href="../controllericon.ico" type="image/icon" />
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../style.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700&display=swap&subset=latin-ext"
+        rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="../main.js" type="text/javascript"></script>
+    <script src="jsconvert.js" type="text/javascript"></script>
+    <script>
+        function pageLoaded() {
+            swal.fire({
+                icon: "error",
+                title: 'Fehlleitung! Das Item "onpage" betrag den Wert "reset" wurde aber als weiterleitung zu reset.html benutzt!'
+            });
+            setTimeout(() => {
+                location.href = "../404.html";
+            }, 3000);
+
+        }
+    </script>
+</head>
+<!-- HEAD END -->
+
+<body id="hintergrund" onload="pageLoaded()">
+</body>
+
+</html>
